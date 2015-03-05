@@ -1,4 +1,24 @@
-# Git Workflow
+#  Style and Theme Guide
+<br>
+<ol>
+    <li>General
+        <ol>
+        <li>Getting started</li>
+        <li>Files and Folder Structure</li>
+        <li>Running Grunt</li>
+        <li>Web page elements names</li>
+        </ol>
+    </li>
+
+    <li>Workflow
+        <ol>
+        <li>Syntax</li>
+        <li>Property Order</li>
+        </ol>
+    </li>
+
+    <li>Technical Tips</li>
+</ol>
 
 This is the workflow you should adopt for a typical feature.
 
