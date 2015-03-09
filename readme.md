@@ -1,17 +1,17 @@
 #  Style and Theme Guide
 
 1. General
-        1. Getting started
-        2. Bootstrap
-        3. Grunt
-        4. LESS Structure
-        5. Naming page elements
+    1. Getting started
+    2. Bootstrap
+    3. Grunt
+    4. LESS Structure
+    5. Naming page elements
 
 
 2. Workflow
-        1. Syntax
-        2. Selectors Order
-        3. Property Order
+    1. Syntax
+    2. Selectors Order
+    3. Property Order
 
 
 3. [Technical Tips](tech-tips)
