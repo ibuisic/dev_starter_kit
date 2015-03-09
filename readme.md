@@ -145,9 +145,9 @@ For example:
 
 - Messing with the grid system and adding style to bootstrap grid classes like `.container` and `.row`.  
 
-- **Divitis**  (Keeep wrappers and containers to a minimum) Save your document from structural bloat. Take advantage of the many structural elements to achieve layout. Do not add more div’s. Consider all options before adding additional wrappers (div’s) to achieve an effect when using a little nifty CSS can get you that same desired effect.
+- **Divitis** (Keeep wrappers and containers to a minimum) Save your document from structural bloat. Take advantage of the many structural elements to achieve layout. Do not add more div’s. Consider all options before adding additional wrappers (div’s) to achieve an effect when using a little nifty CSS can get you that same desired effect. Move ids and class naming as far up the document tree as you can. Leverage contextual selectors as much as possible. Don’t be afraid to be verbose in your selectors. Longer selectors can make css documents easier to read while also cutting down the chances of developing class- or divitis.
 
-- **Keep properties to a minimum.** Work smarter, not harder with CSS. Under this rule, there are a number of subrules: if there isn’t a point to adding a CSS property, don’t add it; if you’re not sure why you’re adding a CSS property, don’t add; and if you feel like you’ve added the same property in lots of places, figure out how to add it in only one place.
+- **Keep properties to a minimum.** Work smarter, not harder with CSS. Under this rule, there are a number of subrules: if there isn’t a point to adding a CSS property, don’t add it; if you’re not sure why you’re adding a CSS property, don’t add; and if you feel like you’ve added the same property in lots of places, figure out how to add it in only one place. But, **Learn to exploit the cascading nature of CSS.** “Say you have two similar boxes on your website with only minor differences – you could write out CSS to style each box, or you could write CSS to style both at the same time, then add extra properties below to make one look different.
 
 - **Avoid unnecessary selectors.** Using less selectors will mean less selectors will be needed to override any particular style — that means it is easier to troubleshoot.
 
