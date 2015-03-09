@@ -18,7 +18,7 @@
 
 
 ##1. General
-    
+
 
 
 ###1. Getting Started
@@ -38,7 +38,7 @@ Navigate to the theme folder install grunt and dependencies:
 ###2. Bootstrap
 
 Bootstrap files can be included via CDN or added to the theme.
-A started sub-theme will be created with all bootstrap LESS files sorted, which you will need to clone into the theme folder.
+A started sub-theme will be created with all bootstrap LESS files sorted, you can clone it into the theme folder.
 
 ###3. Grunt
 
@@ -52,15 +52,22 @@ A started sub-theme will be created with all bootstrap LESS files sorted, which 
 
 ###4. LESS Structure  
 
-Folder structure will usually be set to:
+Master stylesheet `style.less` is located in the root of the LESS folder.
+All created LESS files and all Bootstrap LESS files are imported in that file.
+Comment out all the Bootstrap components that are not used.
 
+Variables, mixins and reset files are loaded first. Pages and overrides are imported last.
+
+All the reusable classes should be located in the `utilites.less` file.
+Typography styles are located in the `type.less` file.
+
+Folder structure will usually be set to:
 
     -- base  
     -- components  
     -- regions  
     -- pages  
     -- utilities  
-
 
 blocks style should go to the **components** or **regions** folder it depends on the design, but if necessary you can add a **blocks** folder and add all the individual blocks style there.
 Same thing goes for **views**, their style is usually in the **pages** folder.
@@ -69,8 +76,7 @@ Same thing goes for **views**, their style is usually in the **pages** folder.
 ##2. Workflow  
 ###1. Syntax
 
-We use the LESS indented format which means:
-
+Important guidelines:
 2 spaces are used for indentation  
 Curly brackets go in the same line as the selector  
 Do not use brackets for invoked selectors, write `.hide` instead off `.hide()`.
