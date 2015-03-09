@@ -16,9 +16,38 @@
 3. Technical Tips
 
 
+##1. General
+
+###1. Getting Started
+
+There will be a main theme and a git repo created.  
+
+Clone the repo:
+
+    git clone git@circlewf.com:sitename.git
+
+Navigate to the theme folder install grunt and dependencies:
+
+    npm install
+    npm install -g grunt-cli
 
 
-###3. LESS Structure  
+###2. Bootstrap
+
+Bootstrap files can be included via CDN or added to the theme.
+A started sub-theme will be created with all bootstrap LESS files sorted, which you will need to clone into the theme folder.
+
+###3. Grunt
+
+- watch
+
+- test
+
+- build
+
+- icons
+
+###4. LESS Structure  
 
 Folder structure will usually be set to:
 
@@ -40,7 +69,7 @@ Same thing goes for **views**, their style is usually in the **pages** folder.
 We use the LESS indented format which means:
 
 2 spaces are used for indentation  
-Curly braces go in the same line as the selector  
+Curly brackets go in the same line as the selector  
 Do not use brackets for invoked selectors, write `.hide` instead off `.hide()`.
 
 
