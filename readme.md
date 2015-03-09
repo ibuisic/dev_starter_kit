@@ -111,13 +111,14 @@ Write and nest your style the same way as you see them in the DOM. From top to b
 
 Properties within selectors should follow this order:
 
-Mixins
-Extends
-Position
-Box model
-Typography
-Decorative
-For example:
+Mixins  
+Extends  
+Position  
+Box model  
+Typography  
+Decorative  
+
+For example:  
 
     .component{
         .css-arrow(property)
@@ -146,7 +147,7 @@ For example:
 - Define pseudo classes for links in the LoVe/HAte-order: Link, Visited, Hover, Active. You’re best off putting your styles in the order “link-visited-hover-active”, or “LVHA” for short.  
 - Define element’s margin, padding or border in TRouBLed-order: Top, Right, Bottom, Left. When using shorthand to specify an element’s margin, padding or border, do it clockwise from the top: Top, Right, Bottom, Left.  
 
-###3. Technical Tips  
+##3. Technical Tips  
 
 - Messing with the grid system and adding style to bootstrap grid classes like `.container` and `.row`.  
 
@@ -161,3 +162,30 @@ For example:
 - **Use Variables** `variables.less` is should be opened at all times. Use as many variables as you can find in that file. Especially the colors. Avoid writing colors.
 
 - **Use our common naming system** At the start of every project we should create a naming system. We want to avoid names that imply presentational aspects. Otherwise, if we name something right-col, it’s entirely possible that the CSS would change and our “right-col” would end up actually being displayed on the left side of our page. That could lead to some confusion in the future, so it’s best that we avoid these types of presentational naming schemes. Having a naming system for id’s and classes saves you a lot of time when looking for bugs, or updating your document.
+
+### Power of Selectors  
+- You can use **child selectors**. “A child selector targets an immediate child of a certain element. A child selector consists of two or more selectors separated by a greater than sign, “>”. The parent goes to the left of the “>”, and whitespace is allowed around the combinator. This rule will affect all strong elements that are children of a div element.
+
+        div > strong { color:#f00; }
+
+- You can use **adjacent sibling selectors**. An adjacent sibling selector is made up of two simple selectors separated by a plus sign, “+”. Whitespace is allowed around the adjacent sibling combinator. The selector matches an element which is the next sibling to the first element. The elements must have the same parent and the first element must immediately precede the second element.
+
+        p + p { color:#f00; }  
+
+- You can use **attribute selectors**. Attribute selectors match elements based on the presence or value of attributes. There are four ways for an attribute selector to match:
+
+        [att]
+        Matches elements that have an att attribute, regardless of its value.
+        [att=val]
+        Matches elements that have an att attribute with a value of exactly “val”.
+        [att~=val]
+        Matches elements whose att attribute value is a space-separated list that contains “val”. In this case “val” cannot contain spaces.
+        [att|=val]
+        Matches elements whose att attribute value is a hyphen-separated list that begins with “val”. The main use for this is to match language subcodes specified by the lang attribute (xml:lang in XHTML), e.g. “en”, “en-us”, “en-gb”, etc.
+
+- Drupal generates body classes, start your page specific Less file with a body class. This will allow you manipulate CSS presentational items and markup elements by page by page basis. Not only will you be able to organize your sections you will be able to create multiple CSS presentations without changing your markup from template to template or page to page.
+
+- Align vertically with line height. Say you have a navigation menu item whose height is assigned 2em. Solution: specify the line height to be the same as the height of the box itself in the CSS. In this instance, the box is 2em high, so we would insert line-height: 2em into the CSS rule and the text now floats in the middle of the box!
+
+
+- You can use pseudo-elements and classes to generate content dynamically. Pseudo-classes and pseudo-elements. Pseudo-classes and pseudo-elements can be used to format elements based on information that is not available in the document tree. For example, there is no element that refers to the first line of a paragraph or the first letter of an element’s text content. You can use :first-child, :hover, :active, :focus, :first-line, :first-letter, :before, :after and more.  
