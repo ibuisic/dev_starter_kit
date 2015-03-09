@@ -141,6 +141,11 @@ For example:
         outline
     }
 
+**Use shorthand notation**  
+- Shorten hexadecimal colour notation.  
+- Define pseudo classes for links in the LoVe/HAte-order: Link, Visited, Hover, Active. You’re best off putting your styles in the order “link-visited-hover-active”, or “LVHA” for short.  
+- Define element’s margin, padding or border in TRouBLed-order: Top, Right, Bottom, Left. When using shorthand to specify an element’s margin, padding or border, do it clockwise from the top: Top, Right, Bottom, Left.  
+
 ###3. Technical Tips  
 
 - Messing with the grid system and adding style to bootstrap grid classes like `.container` and `.row`.  
@@ -155,4 +160,4 @@ For example:
 
 - **Use Variables** `variables.less` is should be opened at all times. Use as many variables as you can find in that file. Especially the colors. Avoid writing colors.
 
-- **Use our common naming system**
+- **Use our common naming system** At the start of every project we should create a naming system. We want to avoid names that imply presentational aspects. Otherwise, if we name something right-col, it’s entirely possible that the CSS would change and our “right-col” would end up actually being displayed on the left side of our page. That could lead to some confusion in the future, so it’s best that we avoid these types of presentational naming schemes. Having a naming system for id’s and classes saves you a lot of time when looking for bugs, or updating your document.
