@@ -14,7 +14,7 @@
 
 
 3. Technical Tips
-
+    1. Things to avoid
 
 
 ##1. General
@@ -144,4 +144,16 @@ For example:
         outline
     }
 
-##3. Technical Tips
+##3. Technical Tips  
+
+
+###1. Things to avoid
+
+- Messing with the grid system and adding style to bootstrap grid classes like `.container` and `.row`.  
+-
+
+
+###1. Things to watch out for
+
+- **Divitis** Keep containers and wrappers to a minimum. Save the document from a structural bloat. Do not add more div's, write more CSS.
+-
