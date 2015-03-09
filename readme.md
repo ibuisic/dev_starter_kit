@@ -111,12 +111,12 @@ Write and nest your style the same way as you see them in the DOM. From top to b
 
 Properties within selectors should follow this order:
 
-Mixins  
-Extends  
-Position  
-Box model  
-Typography  
-Decorative  
+        Mixins  
+        Extends  
+        Position  
+        Box model  
+        Typography  
+        Decorative  
 
 For example:  
 
