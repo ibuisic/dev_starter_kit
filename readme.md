@@ -16,7 +16,7 @@
 
 3. [Technical Tips](tech-tips)
 
-#LESS Structure
+##LESS Structure
 
 Folder structure will usually be set to:
 
@@ -28,7 +28,7 @@ Folder structure will usually be set to:
     -- utilities  
 
 
-blocks should go to the **components** or **regions** folder it depends on the design, but if necessary you can add a **blocks** folder and add all the individual blocks style there.
+blocks style should go to the **components** or **regions** folder it depends on the design, but if necessary you can add a **blocks** folder and add all the individual blocks style there.
 Same thing goes for **views**, their style is usually in the **pages** folder.
 
 
