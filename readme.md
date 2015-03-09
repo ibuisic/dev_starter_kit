@@ -1,25 +1,51 @@
 #  Style and Theme Guide
-<br>
-<ol>
-    <li>General
-        <ol>
-        <li>Getting started</li>
-        <li>Files and Folder Structure</li>
-        <li>Running Grunt</li>
-        <li>Web page elements names</li>
-        </ol>
-    </li>
 
-    <li>Workflow
-        <ol>
-        <li>Syntax</li>
-        <li>Property Order</li>
-        </ol>
-    </li>
+1. General
+        1. Getting started
+        2. Bootstrap
+        3. Grunt
+        4. LESS Structure
+        5. Naming page elements
 
-    <li>Technical Tips</li>
-</ol>
 
+2. Workflow
+        1. Syntax
+        2. Selectors Order
+        3. Property Order
+
+
+3. [Technical Tips](tech-tips)
+
+#LESS Structure
+
+Folder structure will usually be set to:
+
+
+    -- base  
+    -- components  
+    -- regions  
+    -- pages  
+    -- utilities  
+
+
+blocks should go to the **components** or **regions** folder it depends on the design, but if necessary you can add a **blocks** folder and add all the individual blocks style there.
+Same thing goes for **views**, their style is usually in the **pages** folder.
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="head1"> Getting started <h2>
+
+<hr>
 This is the workflow you should adopt for a typical feature.
 
 - Get the latest version of master
