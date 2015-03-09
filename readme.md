@@ -10,13 +10,12 @@
 
 2. Workflow
     1. Syntax
-    2. Selectors Order
-    3. Property Order
+    2. Selector and Property Order
 
 
-3. [Technical Tips](tech-tips)
+3. [Technical Tips](#tech-tips)
 
-     
+
 
 
 ###3. LESS Structure  
@@ -33,3 +32,78 @@ Folder structure will usually be set to:
 
 blocks style should go to the **components** or **regions** folder it depends on the design, but if necessary you can add a **blocks** folder and add all the individual blocks style there.
 Same thing goes for **views**, their style is usually in the **pages** folder.
+
+
+##2. Workflow  
+###1. Syntax
+
+We use the LESS indented format which means:
+
+2 spaces are used for indentation  
+Curly braces go in the same line as the selector  
+Do not use brackets for invoked selectors, write `.hide` instead off `.hide()`.
+
+
+Other guidelines:
+
+Only use the `&:extend` directive to extend placeholders and re-usable classes, not other selectors
+Limit nesting to 2 level deep.
+Avoid large numbers of nested rules.  
+
+Don't over-abstract  
+Write code to be readable and understandable, not to save bytes.
+
+
+
+Comments are encouraged and should follow the below pattern:
+
+    //----------------------------------------------------------
+    // Section or component Title
+    //
+    // Description
+    //----------------------------------------------------------
+
+    .button{
+        color: red
+        // Create a larger hit area
+        padding: 20px
+    }
+
+
+###2. Selector and Property Order
+
+Write and nest your style the same way as you see them in the DOM. From top to bottom.
+
+Properties within selectors should follow this order:
+
+Mixins
+Extends
+Position
+Box model
+Typography
+Decorative
+For example:
+
+    .component{
+        .css-arrow(property)
+        &:extend(.class)
+        position
+        top
+        right
+        z-index
+        display
+        width
+        height
+        margin
+        padding
+        border
+        font-style
+        font-weight
+        line-height
+        background
+        box-shadow
+        opacity
+        outline
+    }
+
+[Technical Tips][]
