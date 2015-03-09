@@ -35,7 +35,7 @@ Navigate to the theme folder install grunt and dependencies:
 ###2. Bootstrap
 
 Bootstrap files can be included via CDN or added to the theme.
-A started sub-theme will be created with all bootstrap LESS files sorted, you can clone it into the theme folder.
+A starter sub-theme kit will be created with all bootstrap LESS files sorted, you can clone it into the theme folder.
 
 ###3. Grunt
 
