@@ -13,7 +13,7 @@
     2. Selector and Property Order
 
 
-3. [Technical Tips](#tech-tips)
+3. Technical Tips
 
 
 
@@ -106,4 +106,4 @@ For example:
         outline
     }
 
-[Technical Tips][]
+##3. Technical Tips
