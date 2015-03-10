@@ -79,6 +79,8 @@ Mixins are stored in a seprated `mixins.less` file.
 #### Important guidelines:
 - 2 spaces are used for indentation  
 - Curly brackets go in the same line as the selector  
+- Nesting selectors more than three levels deep and the code is at risk of being to reliant on HTML structure, overly-specific and difficult to understand.
+- 50 lines is reasonable length for keeping an entire block on a code editor screen without having to scroll.
 - Use a new line for every block, list or table element, and indent every such child element to show heirarchy and improve understanding
 - Do not use brackets for invoked selectors, write `.hide` instead off `.hide()`.
 - When grouping selectors, keep individual selectors to a single line.  
@@ -100,8 +102,6 @@ Mixins are stored in a seprated `mixins.less` file.
 #### Other guidelines:
 
 - Only use the `&:extend` directive to extend placeholders and re-usable classes, not other selectors
-- Nesting selectors more than three levels deep and the code is at risk of being to reliant on HTML structure, overly-specific and difficult to understand.
-- 50 lines is reasonable length for keeping an entire block on a code editor screen without having to scroll.
 - Avoid Qualifying ID and class names with type selectors
 - Avoid large numbers of nested rules.  
 - Don't include spaces after commas in RGB or RGBa colors  
