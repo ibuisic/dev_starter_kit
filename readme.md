@@ -50,10 +50,12 @@ A starter sub-theme kit will be created with all bootstrap LESS files sorted, yo
 ###4. LESS Structure  
 
 Master stylesheet `style.less` is located in the root of the LESS folder.
+The `style.less` file serves as a "table of contents" and the `@import` directives should be listed with vendor dependencies first, then author dependencies and core stylesheets, then components and overrides.
+So, variables, mixins and reset files are loaded first. Pages and overrides are imported last.
+
+Organize the components imports in a manner that makes sense, in other words, group components with the component they extend or inherit from.
 All created LESS files and all Bootstrap LESS files are imported in that file.
 Comment out all the Bootstrap components that are not used.
-
-Variables, mixins and reset files are loaded first. Pages and overrides are imported last.
 
 All the reusable classes should be located in the `utilites.less` file.
 Typography styles are located in the `type.less` file.
@@ -69,26 +71,54 @@ Folder structure will usually be set to:
 blocks style should go to the **components** or **regions** folder it depends on the design, but if necessary you can add a **blocks** folder and add all the individual blocks style there.
 Same thing goes for **views**, their style is usually in the **pages** folder.
 
+Mixins are stored in a seprated `mixins.less` file.
 
 ##2. Workflow  
 ###1. Syntax
 
-Important guidelines:
-2 spaces are used for indentation  
-Curly brackets go in the same line as the selector  
-Do not use brackets for invoked selectors, write `.hide` instead off `.hide()`.
+#### Important guidelines:
+- 2 spaces are used for indentation  
+- Curly brackets go in the same line as the selector  
+- Use a new line for every block, list or table element, and indent every such child element to show heirarchy and improve understanding
+- Do not use brackets for invoked selectors, write `.hide` instead off `.hide()`.
+- When grouping selectors, keep individual selectors to a single line.  
+- Include one space before the opening brace of declaration blocks  
+- Place closing braces of declaration blocks on a new line  
+- Include one space after : in each property  
+- Each declaration should appear on its own line  
+- End all declarations with a semi-colon  
+- Comma-separated values should include a space after each comma  
 
+#### Use Variables
 
-Other guidelines:
+- Variablize all colors.
+- Numbers (other than 0 or 100%) with strong meaning or frequent use should be variables.
+- Use hyphens (-) in variable names.
+- Name variables based on what they represent, not their values, e.g. $text-size-large instead of $text-size-24.
+- Colors, fonts, and base measurements are all great candidates for variables. If you find yourself writing a number other than 0 or 100% more than once, make it a variable.
 
-Only use the `&:extend` directive to extend placeholders and re-usable classes, not other selectors
-Limit nesting to 2 level deep.
-Avoid large numbers of nested rules.  
+#### Other guidelines:
+
+- Only use the `&:extend` directive to extend placeholders and re-usable classes, not other selectors
+- Nesting selectors more than three levels deep and the code is at risk of being to reliant on HTML structure, overly-specific and difficult to understand.
+- 50 lines is reasonable length for keeping an entire block on a code editor screen without having to scroll.
+- Avoid Qualifying ID and class names with type selectors
+- Avoid large numbers of nested rules.  
+- Don't include spaces after commas in RGB or RGBa colors  
+- Do not specify units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`  
+- Lowercase all hex values, e.g., `#fff` instead of `#FFF`  
+- Use shorthand hex values where available, e.g., `#fff` instead of `#ffffff `
+- Quote attribute values in selectors, e.g., `input[type="text"]`
 
 Don't over-abstract  
 Write code to be readable and understandable, not to save bytes.
 
+Important thing:
 
+    !important
+    - nah, just don't
+
+- Use greater specificity to workaround using !important; -- you will be judged in the afterlife
 
 Comments are encouraged and should follow the below pattern:
 
@@ -158,8 +188,6 @@ For example:
 - **Avoid unnecessary selectors.** Using less selectors will mean less selectors will be needed to override any particular style — that means it is easier to troubleshoot.
 
 - **Keep CSS hacks to a min** and use well known hacks. We will have a gist box up and running with all known hacks that are safe to use.
-
-- **Use Variables** `variables.less` is should be opened at all times. Use as many variables as you can find in that file. Especially the colors. Avoid writing colors.
 
 - **Use our common naming system** At the start of every project we should create a naming system. We want to avoid names that imply presentational aspects. Otherwise, if we name something right-col, it’s entirely possible that the CSS would change and our “right-col” would end up actually being displayed on the left side of our page. That could lead to some confusion in the future, so it’s best that we avoid these types of presentational naming schemes. Having a naming system for id’s and classes saves you a lot of time when looking for bugs, or updating your document.
 
